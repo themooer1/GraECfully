@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Gracefully",
+  "name": "GraEC2fully",
+  "description": "Shuts down server cleanly before an AWS stops its spot instance.  Not useful for on-demand.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html",
+  "updateUrl": "",
+  "authorList": ["themooer1"],
+  "credits": "The Venerable Bede",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
