@@ -1,8 +1,16 @@
 language: java
 install: true
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 script:
-  - ./gradlew build -s
+- "./gradlew build -s"
+deploy:
+  provider: releases
+  file: build/libs/*.jar
+  api_key: $GITHUB_KEY
+  skip_cleanup: true
+  on:
+    tags: true
+env:
+  global:
+    secure: szQZxkWtWCE9V7USxKz8zwrkVA6wY3HxWxALj7qVyIosZSNVYKqNIQ9KHGlwr07w9qSe/U0nDDwX8BAG04hmO5lvgaLkdelnBRcm1LCJoExd/A5eXOCxAvnadvCw3fslOhtfUy2EtZh9O9RoYvmBIGdFOL8Rb4oPBajPiLQDVwfJZyI0PuBmCNFmpvco4Bi+hboonRD4/GHBueiynswPNUneIz8cuzaMNtU5L/o1Fpn/a8GsVDzZGRPV4mp9uwyqMuOtlzyr/qoVOby9nX6Qh/pILocSB2SB34jehqK/vV6u1fmh0jmhp/rGln2roeZFzZziIIV2aHv6oBPr58i0oLW79f33L/Lg35NTWrx+5bWgIvUB6PIRX0eZWPKlC45TDGeWMTEkxnVhE9I79P55Oj1r2LxIAfsckulV7rcXsW0X6v0b/GNFIzsuo0iyQR+JV5Me1uS+xuZ4FkvxbirJ5r40JIV0ucZtpDAbr8O633bmvolI9tqG7pgk7wZXDGVEA5yxH3VCyP1BY3zuGm8gPM897BuvR5yigpAG/q74QmGAkG1SQiN81GqsaW+6Fl97l1fXMQiFcgSLOw92rfw8CG4qG0a3Eq8xTGUfhRdYuEwyWLl2EkbSa+A+dYPpPqCcQwbNM3847HNVIKTPgWZMfmxW3PpBUqTo5MTryNOvNHc=
